@@ -2230,7 +2230,7 @@ namespace System.Linq.Dynamic
 
             foreach (Type type in _predefinedTypes) d.Add(type.Name, type);
             foreach (KeyValuePair<string, Type> pair in _predefinedTypesShorthands) d.Add(pair.Key, pair.Value);
-            foreach (Type type in GlobalConfig.CustomTypeProvider.GetCustomTypes()) d.Add(type.Name, type);
+            foreach (Type type in GlobalConfig.CustomTypeProvider.GetCustomTypes()) d.Add(type.FullName, type);
 
             return d;
         }
